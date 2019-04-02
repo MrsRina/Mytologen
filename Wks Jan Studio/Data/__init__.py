@@ -1,21 +1,50 @@
-import pygame as FEngine
+##########
+# Pygame #
+################################################
+import pygame as FEngine # pygame like FEngine #
+################################################
 
 import json
 import math
 import sys
 import os
 
-def load_json(path):
-	try:
-		open_file_json = open(path, "r+")
+class _json(object):
+	def __init__(self, path):
+		try:
+			self.path           = path		
+			self.open_file_json = open(self.path, "r+")
+			self.file_json      = json.load(self.open_file_json)
+		except:
+			raise
+		return None
 
-		file_json = json.load(file)
+	def get(self, value):
+		try:
+			return self.file_json[value]
+		except:
+			raise
+		return None
 
-		_json = json.dump(file_json)
+	def new(self, value, value_end):
+		try:
+			self.file_json[value] = value_end
 
-		return _json
-	except:
-		raise
-	return None
+			self.path.seek(0)
 
-from .far_raw import 
+			json.dump(self.file_json, self.path)
+
+			self.path.truncate()
+		except:
+			raise
+		return None
+
+
+global config
+
+config = _json("config.json")
+
+from far_raw import *
+
+# // Initalize system settings
+system_initalize(config.file_json)
