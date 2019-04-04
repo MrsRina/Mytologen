@@ -1,7 +1,7 @@
-PATH=data/python/
+cd data/python/
 
-python /data/Far_Main.py
+cls
 
-@echo Finished aplication
+python "%~dp0\data\Far_Main.py"
 
 pause

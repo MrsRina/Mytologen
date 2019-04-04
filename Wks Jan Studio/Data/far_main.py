@@ -32,6 +32,3 @@ class Aplication_Game:
 		except:
 			raise
 		return None
-
-# Run
-Aplication_Game()
