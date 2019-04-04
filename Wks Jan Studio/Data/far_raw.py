@@ -12,12 +12,10 @@ class system_initalize(object):
 			self.resolution_width  = GetSystemMetrics(0)
 			self.resolution_height = GetSystemMetrics(1)
 
-			if json_init["Resolution Width"]  == self.resolution_width :
-				return ("Resolution Width: {}".format(json_init["Resolution Width"]))
-			else:
-				json_init["Resolution Width"] = self.resolution_width
+			# set Width _ Height
+			json_init.new("Resolution Width",  str(self.resolution_width))
+			json_init.new("Resolution Height", str(self.resolution_height))
 
-			if json_init["Resolution Height"] == self.resolution_height : return ("Resolution Height: {}".format(json_init["Resolution Height"]))
 		except:
 			raise
 		return None

@@ -1,4 +1,11 @@
-from __init__ import config, FEngine, config, sys
+from __init__ import *
+
+import pygame as FEngine
+
+import json
+import math
+import sys
+import os
 
 class Aplication_Game:
 	def __init__(self):
@@ -8,32 +15,23 @@ class Aplication_Game:
 
 			FEngine.init()
 
-			FEngine.display.set_mode((self.Far_Game_Window_Width, self.Far_Game_Window_Height), FEngine.DOUBLEBUF)
+			self.Far_Game_Window = FEngine.display.set_mode((self.Far_Game_Window_Width, self.Far_Game_Window_Height), FEngine.DOUBLEBUF)
 
 			FEngine.display.set_caption(config.get("Title"))
 
 			self.Far_Game_Window_Runing = True
 
 			while (self.Far_Game_Window_Runing):
-				# Sync default settings
-				self.sync_event_quit()
+				for Far_Game_Window_Cache_Event in FEngine.event.get():
+					self.Far_Game_Window_Event = load_event(Far_Game_Window_Cache_Event, self.Far_Game_Window, self.Far_Game_Window_Width, self.Far_Game_Window_Height)
+
+					self.Far_Game_Window_Event.quit(self.Far_Game_Window_Runing)
 
 				FEngine.display.flip()
 
 		except:
 			raise
 		return None
-
-	def sync_event_quit(self):
-		try:
-			for event in FEngine.event.get():
-				if event.type == FEngine.QUIT:
-					self.Far_Game_Window_Runing = False
-					sys.exit()
-		except:
-			raise
-		return None
-
 
 # Run
 Aplication_Game()

@@ -1,8 +1,4 @@
-##########
-# Pygame #
-################################################
-import pygame as FEngine # pygame like FEngine #
-################################################
+import pygame as FEngine
 
 import json
 import math
@@ -30,11 +26,11 @@ class _json(object):
 		try:
 			self.file_json[value] = value_end
 
-			self.path.seek(0)
+			self.open_file_json.seek(0)
 
-			json.dump(self.file_json, self.path)
+			json.dump(self.file_json, self.open_file_json)
 
-			self.path.truncate()
+			self.open_file_json.truncate()
 		except:
 			raise
 		return None
@@ -47,4 +43,6 @@ config = _json("config.json")
 from far_raw import *
 
 # // Initalize system settings
-system_initalize(config.file_json)
+system_initalize(config)
+
+from far_dat import *

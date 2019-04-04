@@ -1,8 +1,1 @@
-{
-	"Title" : "Farmafia",
-
-	"Resolution Width"  : "1024",
-	"Resolution Height" : "768",
-
-	"TPS" : "75"
-}
+{"Title": "Farmafia", "Resolution Width": "1280", "Resolution Height": "1024", "TPS": "75"}
