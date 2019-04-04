@@ -1,8 +1,6 @@
-path = data/python/
+PATH=data/python/
 
-cls
-
-python data/far_main.py
+python /data/Far_Main.py
 
 @echo Finished aplication
 

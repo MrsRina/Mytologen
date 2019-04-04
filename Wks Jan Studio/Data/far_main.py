@@ -1,4 +1,4 @@
-from __init__ import *
+from define import *
 
 import pygame as FEngine
 
