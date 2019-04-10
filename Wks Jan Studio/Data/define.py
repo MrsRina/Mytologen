@@ -5,12 +5,24 @@ import math
 import sys
 import os
 
+def replace_folder(remove, place):
+	try:
+		cache      = os.path.realpath(__file__)
+		cahce_path = cache.replace("\\", "/")
+		
+		path = cahce_path.replace(remove, place)
+		
+		return path
+	except:
+		raise
+	return None
+
 class _json(object):
 	def __init__(self, path):
 		try:
 			self.path           = path		
-			self.open_file_json = open(self.path, "r+")
-			self.file_json      = json.load(self.open_file_json)
+			self.open_file_json = open(self.path, encoding = "utf-8")
+			self.file_json      = json.loads(self.open_file_json.read())
 		except:
 			raise
 		return None
@@ -38,7 +50,7 @@ class _json(object):
 
 global config
 
-config = _json("config.json")
+config = _json(replace_folder("/Data//define.py", "/config.json"))
 
 from far_raw import *
 

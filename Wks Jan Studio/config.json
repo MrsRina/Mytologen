@@ -1,1 +1,6 @@
-{"Title": "Farmafia", "Resolution Width": "1280", "Resolution Height": "1024", "TPS": "75"}
+{
+	"Title"             : "Mytologen",
+	"Resolution Width"  : "1280",
+	"Resolution Height" : "1024",
+	"TPS"               : "75"
+}
