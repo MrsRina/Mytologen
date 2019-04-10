@@ -21,8 +21,8 @@ class _json(object):
 	def __init__(self, path):
 		try:
 			self.path           = path		
-			self.open_file_json = open(self.path, encoding = "utf-8")
-			self.file_json      = json.loads(self.open_file_json.read())
+			self.open_file_json = open(self.path, "r+")
+			self.file_json      = json.load(self.open_file_json)
 		except:
 			raise
 		return None
