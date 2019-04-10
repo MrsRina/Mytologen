@@ -27,7 +27,7 @@ class _json(object):
 		try:
 			self.path           = path		
 			self.open_file_json = open(self.path, "r+")
-			self.file_json      = json.load(self.open_file_json)
+			self.file_json      = print(json.load(self.open_file_json))
 		except:
 			raise
 		return None
