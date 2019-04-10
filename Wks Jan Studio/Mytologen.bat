@@ -2,6 +2,6 @@ cd data/python/
 
 cls
 
-python "%~dp0\data\Far_Main.py"
+python "%~dp0\data\myt_main.py"
 
 pause

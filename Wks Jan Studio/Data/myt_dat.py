@@ -1,4 +1,4 @@
-import pygame as FEngine
+import pygame as MYengine
 
 import json
 import math
@@ -6,9 +6,9 @@ import sys
 import os
 
 KEY_MOUSE_BINDS = {
-	"mouse"    	   : FEngine.MOUSEBUTTONDOWN,
-	"mouse-up" 	   : FEngine.MOUSEBUTTONUP,
-	"mouse-motion" : FEngine.MOUSEMOTION,
+	"mouse"    	   : MYengine.MOUSEBUTTONDOWN,
+	"mouse-up" 	   : MYengine.MOUSEBUTTONUP,
+	"mouse-motion" : MYengine.MOUSEMOTION,
 }
 
 class load_event(object):
@@ -36,8 +36,8 @@ class load_event(object):
 
 	def quit(self, var):
 		try:
-			if self.main_event.type == FEngine.QUIT:
-				getattr(var, "False")
+			if self.main_event.type == MYengine.QUIT:
+				var = False
 				sys.exit()
 		except:
 			raise

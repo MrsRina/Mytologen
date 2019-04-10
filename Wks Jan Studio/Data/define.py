@@ -1,4 +1,4 @@
-import pygame as FEngine
+import pygame as MYengine
 
 import json
 import math
@@ -56,9 +56,9 @@ global config
 
 config = _json(replace_folder("/data/define.py", "/config.json"))
 
-from far_raw import *
+from myt_raw import *
 
 # // Initalize system settings
 system_initalize(config)
 
-from far_dat import *
+from myt_dat import *
