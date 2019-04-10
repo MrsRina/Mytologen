@@ -57,4 +57,3 @@ from far_raw import *
 system_initalize(config)
 
 from far_dat import *
-
