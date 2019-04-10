@@ -47,7 +47,6 @@ class _json(object):
 			raise
 		return None
 
-
 global config
 
 config = _json(replace_folder("/Data//define.py", "/config.json"))
