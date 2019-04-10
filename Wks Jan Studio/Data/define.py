@@ -5,6 +5,11 @@ import math
 import sys
 import os
 
+import logging
+
+logging.basicConfig()
+logging.basicConfig(level = logging.DEBUG)
+
 def replace_folder(remove, place):
 	try:
 		cache      = os.path.realpath(__file__)
@@ -49,11 +54,11 @@ class _json(object):
 
 global config
 
-config = _json(replace_folder("/Data//define.py", "/config.json"))
+config = _json(replace_folder("/Data/define.py", "/config.json"))
 
 from far_raw import *
 
 # // Initalize system settings
-system_initalize(config)
+#system_initalize(config)
 
 from far_dat import *
