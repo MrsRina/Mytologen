@@ -27,7 +27,7 @@ class _json(object):
 		try:
 			self.path           = path		
 			self.open_file_json = open(self.path, "r+")
-			self.file_json      = print(self.open_file_json)#json.load(self.open_file_json))
+			self.file_json      = json.load(self.open_file_json)
 		except:
 			raise
 		return None
@@ -54,11 +54,11 @@ class _json(object):
 
 global config
 
-config = _json(replace_folder("/Data/define.py", "/config.json"))
+config = _json(replace_folder("/data/define.py", "/config.json"))
 
 from far_raw import *
 
 # // Initalize system settings
-#system_initalize(config)
+system_initalize(config)
 
 from far_dat import *

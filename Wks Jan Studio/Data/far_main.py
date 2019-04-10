@@ -32,3 +32,6 @@ class Aplication_Game:
 		except:
 			raise
 		return None
+
+if __name__ == "__main__":
+	Aplication_Game()
