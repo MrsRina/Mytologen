@@ -1,4 +1,4 @@
-import pygame as MYengine
+import pygame as MYengine # I used pygame as myengine for not having code conflicts
 
 import json
 import math
@@ -43,10 +43,21 @@ class load_event(object):
 			raise
 		return None
 
-class player(object):
-	def __init__(self):
+class entity(object):
+	def __init__(self, tag, x, y, w, h, color):
 		try:
-			pass
+			self.rect  = pygame.rect.Rect(x, y, w, h)
+
+			self.color = color
+
+			self.tag = tag
+		except:
+			raise
+		return None
+
+	def spawn_to(self, window):
+		try:
+			MYengine.draw.rect(window, self.color, self.rect)
 		except:
 			raise
 		return None
