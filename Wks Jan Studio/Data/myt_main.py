@@ -52,7 +52,7 @@ class Aplication_Game:
 	def scene_construct(self):
 		try:
 			self.Myt_Game_Floor_Object = game_object("Floor-0", path = scenes_objects["floor_0"])
-			print(self.Myt_Game_Floor_Object.image.JANJA_IMAGE.x)
+			
 		except:
 			raise
 		return None

@@ -176,13 +176,13 @@ class loadImage(object):
 		try:
 			if self.JANJA_IMAGE_RENDERED == False:			
 				# Equivalente a cache =  93 bytes (93 bytes):
-				janja_cache_color_r, janja_cache_color_g, janja_cache_color_b, janja_cache_color_a=r, g, b, a
+				janja_cache_color_r, janja_cache_color_g, janja_cache_color_b, janja_cache_color_a = r, g, b, a
 
 				# Implementar cache + 218 bytes (218 bytes):
-				self.JANJA_COLOR_IMAGE_R = janja_cache_color_r/255
-				self.JANJA_COLOR_IMAGE_G = janja_cache_color_g/255
-				self.JANJA_COLOR_IMAGE_B = janja_cache_color_b/255
-				self.JANJA_COLOR_IMAGE_A = janja_cache_color_a/255
+				self.JANJA_COLOR_IMAGE_R = janja_cache_color_r / 255
+				self.JANJA_COLOR_IMAGE_G = janja_cache_color_g / 255
+				self.JANJA_COLOR_IMAGE_B = janja_cache_color_b / 255
+				self.JANJA_COLOR_IMAGE_A = janja_cache_color_a / 255
 
 				# Total:
 				# 311 bytes (311 bytes) #
@@ -200,10 +200,10 @@ class loadImage(object):
 				janja_cache_color_r, janja_cache_color_g, janja_cache_color_b, janja_cache_color_a=r, g, b, a
 
 				# Implementar cache + 218 bytes (218 bytes):
-				self.JANJA_COLOR_IMAGE_R = janja_cache_color_r/255
-				self.JANJA_COLOR_IMAGE_G = janja_cache_color_g/255
-				self.JANJA_COLOR_IMAGE_B = janja_cache_color_b/255
-				self.JANJA_COLOR_IMAGE_A = janja_cache_color_a/255
+				self.JANJA_COLOR_IMAGE_R = janja_cache_color_r / 255
+				self.JANJA_COLOR_IMAGE_G = janja_cache_color_g / 255
+				self.JANJA_COLOR_IMAGE_B = janja_cache_color_b / 255
+				self.JANJA_COLOR_IMAGE_A = janja_cache_color_a / 255
 
 				# Total:
 				# 311 bytes (311 bytes) #
