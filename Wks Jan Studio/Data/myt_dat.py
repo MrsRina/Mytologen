@@ -357,6 +357,24 @@ class game_object(object):
 			raise
 		return None
 
+	def getSize(self, type):
+		try:
+			if type is "width" or type is "Width" or type is "WIDTH":
+				self.image.JANJA_IMAGE.w
+		except:
+			raise
+		return None
+
+	def setPos(self, x, y):
+		try:
+			if x != 0:
+				self.image.JANJA_IMAGE.x = x
+			if y != 0:
+				self.image.JANJA_IMAGE.y = y
+		except:
+			raise
+		return None
+
 	def render_to(self, window):
 		try:
 			self.image.renderImage()
@@ -390,7 +408,7 @@ class entity(object):
 class background_scroll(object):
 	def __init__(self):
 		try:
-
+			pass
 		except:
 			raise
 		return None

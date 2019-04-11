@@ -14,7 +14,7 @@ import os
 class level_procedural(object):
 	def __init__(self, floor_top = None, floor_bottom = None):
 		try:
-			
+			pass
 		except:
 			raise
 		return None
@@ -60,7 +60,7 @@ class Aplication_Game:
 	def scene_construct(self):
 		try:
 			self.Myt_Game_Floor_Object = game_object("Floor-0", path = scenes_objects["floor_0"])
-			
+			self.Myt_Game_Floor_Object.setPos(int(config("Resolution Width")) - self., 0)
 		except:
 			raise
 		return None
