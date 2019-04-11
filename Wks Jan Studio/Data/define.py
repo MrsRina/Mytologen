@@ -1,4 +1,8 @@
-import pygame as MYengine
+from OpenGL.GL   import *
+from OpenGL.GLU  import *
+from OpenGL.GLUT import *
+
+import pygame as MYengine # I used pygame as myengine for not having code conflicts
 
 import json
 import math
@@ -62,3 +66,7 @@ from myt_raw import *
 system_initalize(config)
 
 from myt_dat import *
+
+scenes_objects = {
+	"floor_0" : replace_folder("/define.py", "/textures/scenes/scenes_floor_0.png"),
+}
