@@ -11,6 +11,14 @@ import math
 import sys
 import os
 
+class level_procedural(object):
+	def __init__(self, floor_top = None, floor_bottom = None):
+		try:
+			
+		except:
+			raise
+		return None
+
 class Aplication_Game:
 	def __init__(self):
 		try:

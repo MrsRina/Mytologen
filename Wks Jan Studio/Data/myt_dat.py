@@ -386,3 +386,11 @@ class entity(object):
 		except:
 			raise
 		return None
+
+class background_scroll(object):
+	def __init__(self):
+		try:
+
+		except:
+			raise
+		return None
